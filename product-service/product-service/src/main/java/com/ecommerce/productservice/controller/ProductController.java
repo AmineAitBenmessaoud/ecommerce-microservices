@@ -18,7 +18,7 @@ public class ProductController {
         return service.getAll();
     }
     @GetMapping("/{id}")
-    public Product getById(Long id) {
+    public Product getById(@PathVariable Long id) {
         return service.getById(id);
     }
     @PostMapping ("/create")
@@ -26,7 +26,7 @@ public class ProductController {
         return service.save(product);
     }
     @DeleteMapping("/{id}")
-    public void delete(Long id) {
+    public void delete(@PathVariable Long id) {
         service.delete(id);
     }
 }

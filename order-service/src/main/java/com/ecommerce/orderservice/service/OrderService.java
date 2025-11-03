@@ -36,7 +36,7 @@ public class OrderService {
                 order.getPrice()
         );
 
-        kafkaTemplate.send("order-topic", event);
+        kafkaTemplate.send("order-events", event);
 
         return order;
     }
